@@ -10,7 +10,7 @@ type Props = {
 }
 defineProps<Props>();
 
-import {bases, BaseBeverageType} from "../stores/beverage";
+import {BaseBeverageType} from "../stores/beverage";
 
 </script>
 <style scoped>

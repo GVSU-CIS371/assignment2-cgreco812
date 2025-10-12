@@ -4,7 +4,16 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+type Props = {
+  creamer: CreamerType;
+}
+defineProps<Props>();
+
+import {CreamerType} from "../stores/beverage";
+</script>
+
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
@@ -17,7 +26,7 @@
 }
 .foam {
   display: block;
-  background: #e4e0d2;
+  background:  v-bind('creamer.color');
   border-radius: 30px;
   height: 40px;
   width: 40px;
