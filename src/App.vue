@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Beverage :isIced="currentTemp === 'Cold'" :base="currentBase" :creamer="currentCreamer"/>
+    <Beverage :isIced="currentTemp === 'Cold'" :base="currentBase" :creamer="currentCreamer" :syrup="currentSyrup"/>
     <ul>
       <li>
         <template v-for="temp in temps" :key="temp">
@@ -51,7 +51,7 @@
               type="radio"
               name="cream"
               :id="`r${syrup.id}`"
-              :value="syrup.name"
+              :value="syrup"
               v-model="currentSyrup"
             />
             {{ syrup.name }}
