@@ -45,11 +45,11 @@
         </template>
       </li>
       <li>
-        <template v-for="syrup in syrups" :key="creasyrupmer">
+        <template v-for="syrup in syrups" :key="syrup">
           <label>
             <input
               type="radio"
-              name="cream"
+              name="syrup"
               :id="`r${syrup.id}`"
               :value="syrup"
               v-model="currentSyrup"

@@ -1,6 +1,6 @@
 <template>
   <div class="froth">
-    <div v-for=" in 5" class="foam"></div>
+    <div v-for=" in 5" class="foam" :style="{backgroundColor: creamer.color}"></div>
   </div>
 </template>
 
@@ -26,7 +26,6 @@ import {CreamerType} from "../stores/beverage";
 }
 .foam {
   display: block;
-  background:  v-bind('creamer.color');
   border-radius: 30px;
   height: 40px;
   width: 40px;
